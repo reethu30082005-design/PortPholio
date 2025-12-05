@@ -1,276 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>My Personal Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>My Personal Portfolio</h1>
-    <nav class="main-nav">
-  <!-- Reethika -->
-  <div class="dropdown">
-    <button class="dropbtn">Reethika DN</button>
-    <div class="dropdown-content">
-      <a href="#" onclick="showSection('myResume')">Resume</a>
-      <a href="#" onclick="showSection('myBiodata')">Bio-data</a>
-    </div>
-  </div>
 
-  <!-- Monika -->
-  <div class="dropdown">
-    <button class="dropbtn">Monika R</button>
-    <div class="dropdown-content">
-      <a href="#" onclick="showSection('monikaResume')">Resume</a>
-      <a href="#" onclick="showSection('monikaBiodata')">Bio-data</a>
-    </div>
-  </div>
+<div class="container">
+    <h2>Student Registration Form</h2>
+    <form action="submit.php" method="POST">
 
-  <!-- Akshatha (placed right next to Monika) -->
-  <div class="dropdown">
-    <button class="dropbtn">Akshatha S</button>
-    <div class="dropdown-content">
-      <a href="#" onclick="showSection('akshathaResume')">Resume</a>
-      <a href="#" onclick="showSection('akshathaBiodata')">Bio-data</a>
-    </div>
-  </div>
-</nav>
+        <h3>Personal Details</h3>
+        <label>Full Name:</label>
+        <input type="text" name="fullname" required>
 
-  </header>
+        <label>Date of Birth:</label>
+        <input type="date" name="dob" required>
 
-  <section class="content">
-    <!-- Welcome message -->
-    <div id="welcome" class="info-section">
-      <h2>Welcome 👋</h2>
-      <p>Select a name from the navigation bar above, then choose Resume or Bio-data to view details.</p>
-    </div>
+        <label>Gender:</label>
+        <div class="radio-group">
+            <input type="radio" name="gender" value="Male" required> Male
+            <input type="radio" name="gender" value="Female" required> Female
+            <input type="radio" name="gender" value="Other" required> Other
+        </div>
 
-    <!-- My Resume -->
-    <div id="myResume" class="info-section" style="display:none;">
-      <h2>Resume – Reethika DN</h2>
-      <p><strong>Location:</strong> Bangalore</p>
-      <p><strong>Phone:</strong> +91-6363200655</p>
-      <p><strong>Email:</strong> reethu30082005@gmail.com</p>
-      <p><strong>LinkedIn:</strong> 
-        <a href="https://www.linkedin.com/in/reethika-dn-4b953437b" target="_blank">
-          https://www.linkedin.com/in/reethika-dn-4b953437b
-        </a>
-      </p>
+        <label>Email:</label>
+        <input type="email" name="email" required>
 
-      <h3>Career Objective</h3>
-      <p>To build strong technical and problem-solving skills in computer science and start my career as a software engineer by working on real-world projects that help me grow and contribute to the organization.</p>
+        <label>Phone:</label>
+        <input type="text" name="phone" required>
 
-      <h3>Education Qualification</h3>
-      <table>
-        <tr><th>Degree</th><th>Institution</th><th>Year</th><th>Result</th></tr>
-        <tr><td>B.E in CSE</td><td>Sapthagiri College of Engineering</td><td>2027</td><td>8.97 CGPA (till 4th sem)</td></tr>
-        <tr><td>12th (PCMB)</td><td>SBG PU College</td><td>2023</td><td>95.33%</td></tr>
-        <tr><td>10th</td><td>SAC Mayura Eng Med High School</td><td>2021</td><td>96.16%</td></tr>
-      </table>
+        <label>Country:</label>
+        <select name="country" required>
+            <option value="">Select</option>
+            <option>India</option>
+            <option>USA</option>
+            <option>UK</option>
+            <option>Canada</option>
+            <option>Other</option>
+        </select>
 
-      <h3>Technical Skills</h3>
-      <ul>
-        <li>Computer Networks: Protocols (TCP/IP, HTTP), Routing, Switching</li>
-        <li>Languages: Python, Java, C</li>
-        <li>Operating Systems: Windows 11, Linux basics (Fedora)</li>
-      </ul>
+        <label>Father's Name:</label>
+        <input type="text" name="father" required>
 
-      <h3>Projects</h3>
-      <ul>
-        <li><strong>QnA Chatbot:</strong> AI-powered chatbot that answers questions with real-time info. Built using Python and Gemini AI.</li>
-        <li><strong>Virtual Assistant (AI-based):</strong> Voice-based assistant with speech recognition and task automation. Built in Python.</li>
-        <li><strong>Gram-Connect:</strong> IVR system for healthcare support (hospital locator, appointments, first aid guidance). Built using MERN stack and APIs.</li>
-      </ul>
+        <label>Mother's Name:</label>
+        <input type="text" name="mother" required>
 
-      <h3>Certificates</h3>
-      <ul>
-        <li>Infosys Springboard – HTML, CSS</li>
-        <li>Infosys Springboard – Computer Networks and Internet Security</li>
-        <li>Infosys Springboard – JavaScript</li>
-      </ul>
 
-      <h3>Strengths & Languages</h3>
-      <ul>
-        <li><strong>Strengths:</strong> Logical thinking, Time management, Quick learner</li>
-        <li><strong>Languages:</strong> English, Kannada</li>
-      </ul>
+        <h3>Academic Details</h3>
+        <label>USN:</label>
+        <input type="text" name="usn" required>
 
-      <h3>Declaration</h3>
-      <p>I hereby declare that the particulars given above are true, complete, and correct to the best of my knowledge and belief.</p>
-      <p><strong>Place:</strong> Bangalore</p>
-      <p><strong>Date:</strong> November 20, 2025</p>
-      <p><strong>Signature:</strong> Reethika DN</p>
-    </div>
+        <label>College / University:</label>
+        <input type="text" name="college" required>
 
-    <!-- My Bio-data -->
-    <div id="myBiodata" class="info-section" style="display:none;">
-      <h2>Bio-data – Reethika DN</h2>
-      <table>
-        <tr><th>Name</th><td>Reethika DN</td></tr>
-        <tr><th>DOB</th><td>30/08/2005</td></tr>
-        <tr><th>Gender</th><td>Female</td></tr>
-        <tr><th>Father's Name</th><td>Nagaraju</td></tr>
-        <tr><th>Mother's Name</th><td>Varalakshmi</td></tr>
-        <tr><th>Phone</th><td>+91-6363200655</td></tr>
-        <tr><th>Email</th><td>reethu30082005@gmail.com</td></tr>
-        <tr><th>Address</th><td>Doddashettikere, Mayasandra</td></tr>
-        <tr><th>Languages Known</th><td>English, Kannada, Hindi</td></tr>
-        <tr><th>Hobbies</th><td>Reading, Drawing, Sports</td></tr>
-      </table>
-    </div>
+        <label>Branch / Department:</label>
+        <select name="branch" required>
+            <option value="">Select</option>
+            <option>CSE</option>
+            <option>ECE</option>
+            <option>EEE</option>
+            <option>Mechanical</option>
+            <option>Civil</option>
+            <option>IT</option>
+        </select>
 
-    <!-- Friend's Resume -->
-    <!-- Friend's Resume -->
-<div id="monikaResume" class="info-section" style="display:none;">
-  <h2>Resume – Monika R</h2>
-  <p><strong>Location:</strong> Bangalore</p>
-  <p><strong>Phone:</strong> +91-8861250022</p>
-  <p><strong>Email:</strong> monikarmoni334@gmail.com</p>
-  <p><strong>LinkedIn:</strong> 
-    <a href="https://www.linkedin.com/in/monika-moni423006380" target="_blank">
-      https://www.linkedin.com/in/monika-moni423006380
-    </a>
-  </p>
+        <label>Course:</label>
+        <div class="radio-group">
+            <input type="radio" name="course" value="UG" required> UG
+            <input type="radio" name="course" value="PG" required> PG
+        </div>
 
-  <h3>Career Objective</h3>
-  <p>To apply my troubleshooting skills and technical knowledge to ensure smooth system operations and assist users effectively. To build strong technical and analytical skills by contributing to real-world projects and learning modern technologies.</p>
+        <label>Year / Semester:</label>
+        <input type="text" name="semester" placeholder="E.g., 3rd Year / 5th Sem" required>
 
-  <h3>Education Qualification</h3>
-  <table>
-    <tr><th>Degree</th><th>Institution</th><th>Year</th><th>Result</th></tr>
-    <tr><td>B.E in CSE</td><td>Sapthagiri College of Engineering</td><td>2027</td><td>8.97 CGPA (till 4th sem)</td></tr>
-    <tr><td>12th (PCMB)</td><td>Hoysala PU College</td><td>2023</td><td>93.33%</td></tr>
-    <tr><td>10th</td><td>S J RS Rural High School</td><td>2021</td><td>93.44%</td></tr>
-  </table>
+        <h3>Additional Info</h3>
+        <label>Hobbies:</label>
+        <div class="checkbox-group">
+            <input type="checkbox" name="hobbies[]" value="Reading"> Reading
+            <input type="checkbox" name="hobbies[]" value="Sports"> Sports
+            <input type="checkbox" name="hobbies[]" value="Music"> Music
+            <input type="checkbox" name="hobbies[]" value="Travel"> Travel
+        </div>
 
-  <h3>Technical Skills</h3>
-  <ul>
-    <li>Computer Networks: Protocols (TCP/IP, HTTP), Routing, Switching</li>
-    <li>Languages: Python, Java, C</li>
-    <li>Operating Systems: Windows 11, Linux basics (Fedora)</li>
-    <li>Cybersecurity: Firewall basics, malware types, basic encryption concepts</li>
-  </ul>
+        <label>Skills:</label>
+        <input type="text" name="skills" placeholder="E.g., Java, Web Development, Python">
 
-  <h3>Projects</h3>
-  <ul>
-    <li><strong>QnA Chatbot:</strong> AI-powered chatbot that answers questions with real-time info. Built using Python and Gemini AI.</li>
-    <li><strong>Virtual Assistant (AI-based):</strong> Voice-based assistant with speech recognition and task automation. Built in Python.</li>
-    <li><strong>Gram-Connect:</strong> IVR system for healthcare support (hospital locator, appointments, first aid guidance). Built using MERN stack and APIs.</li>
-  </ul>
+        <label>Languages Known:</label>
+        <select name="languages[]" multiple required>
+            <option>English</option>
+            <option>Hindi</option>
+            <option>Kannada</option>
+            <option>Telugu</option>
+            <option>Tamil</option>
+            <option>other</option>
+        </select>
 
-  <h3>Certificates</h3>
-  <ul>
-    <li>Infosys Springboard – HTML5</li>
-    <li>Infosys Springboard – Computer Networks and Internet Security</li>
-    <li>Infosys Springboard – JavaScript</li>
-  </ul>
+        <label>Address:</label>
+        <textarea name="address" required></textarea>
 
-  <h3>Strengths & Languages</h3>
-  <ul>
-    <li><strong>Strengths:</strong> Problem-solving, Logical thinking, Team collaboration, Quick learner</li>
-    <li><strong>Languages:</strong> English, Kannada, Hindi</li>
-  </ul>
-
-  <h3>Declaration</h3>
-  <p>I hereby declare that the particulars given above are true, complete, and correct to the best of my knowledge and belief.</p>
-  <p><strong>Place:</strong> Bangalore</p>
-  <p><strong>Date:</strong> November 20, 2025</p>
-  <p><strong>Signature:</strong> Monika R</p>
+        <button type="submit">Submit</button>
+    </form>
 </div>
 
-    <!-- Friend's Bio-data -->
-    <div id="monikaBiodata" class="info-section" style="display:none;">
-      <h2>Bio-data – Monika R</h2>
-      <table>
-        <tr><th>Name</th><td>Monika R</td></tr>
-        <tr><th>DOB</th><td>12/07/2005</td></tr>
-        <tr><th>Gender</th><td>Female</td></tr>
-        <tr><th>Father's Name</th><td>Rangaswamaiah</td></tr>
-        <tr><th>Phone</th><td>+91-8861250022</td></tr>
-        <tr><th>Email</th><td>monikarmoni334@gmail.com</td></tr>
-        <tr><th>Address</th><td>Nelamangala, Bengaluru</td></tr>
-        <tr><th>Languages Known</th><td>English, Kannada, Hindi</td></tr>
-        <tr><th>Hobbies</th><td>Reading, Drawing, Sports</td></tr>
-      </table>
-    </div>
-    <!-- Friend's Resume – Akshatha S -->
-<div id="akshathaResume" class="info-section" style="display:none;">
-  <h2>Resume – Akshatha S</h2>
-  <p><strong>Location:</strong> Bengaluru, Karnataka, India</p>
-  <p><strong>Email:</strong> keerthiakshatha@gmail.com</p>
-  <p><strong>LinkedIn:</strong> 
-    <a href="https://www.linkedin.com/publicprofile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contactinfo%3BUsdE24kXSouj2YrFvov2sg%3D%3D" target="_blank">
-      LinkedIn Profile
-    </a>
-  </p>
-  <p><strong>GitHub:</strong> 
-    <a href="http://github.com/AkshathaShivakumar" target="_blank">
-      github.com/AkshathaShivakumar
-    </a>
-  </p>
-
-  <h3>Career Objective</h3>
-  <p>To apply the technical skills I gained during my academics to real-world projects and contribute to developing solutions that help people overcome difficulties in using existing technology.</p>
-
-  <h3>Education Qualification</h3>
-  <table>
-    <tr><th>Degree</th><th>Institution</th><th>Year</th><th>Result</th></tr>
-    <tr><td>B.E in CSE</td><td>Sapthagiri College of Engineering, Bengaluru</td><td>2027</td><td>CGPA: 9.4</td></tr>
-    <tr><td>Class XII (PCMB)</td><td>Vidya Mandir Ind PU College, Bengaluru</td><td>2022</td><td>94.66%</td></tr>
-    <tr><td>Class X</td><td>St Mary’s High School, Bengaluru</td><td>2020</td><td>97.12%</td></tr>
-  </table>
-
-  <h3>Technical Skills</h3>
-  <ul>
-    <li>Programming Languages: Python, Java</li>
-    <li>Web Technologies: HTML, CSS, JavaScript, Node.js, Express</li>
-    <li>Core CS Subjects: Operating Systems, Computer Networks, OOPs</li>
-    <li>Tools/Platforms: Git, GitHub, VS Code, IntelliJ IDEA</li>
-  </ul>
-
-  <h3>Academic Projects</h3>
-  <ul>
-    <li><strong>Restaurant Menu Page:</strong> Responsive webpage showcasing food categories and styled price tags.</li>
-    <li><strong>Student Marks Analyzer (Java):</strong> Console-based project analyzing student marks.</li>
-    <li><strong>ATM Simulator (Java – Console):</strong> Beginner-friendly Java program simulating ATM operations.</li>
-    <li><strong>Sorting Visualizer (Java – Console):</strong> Demonstrates sorting algorithms step by step.</li>
-    <li><strong>FrontierHealth AI:</strong> GenAI-powered health assistant providing structured guidance based on symptoms, age, and gender.</li>
-    <li><strong>Gram Connect (Backend Developer):</strong> Rural healthcare support app backend with Node.js & Express, RESTful APIs, geocoding integration, and secure data handling.</li>
-  </ul>
-
-  <h3>Languages Known</h3>
-  <ul>
-    <li>English (Fluent)</li>
-    <li>Kannada (Native)</li>
-  </ul>
-
-  <h3>Declaration</h3>
-  <p>I hereby declare that the information provided above is true to the best of my knowledge and belief.</p>
-  <p><strong>Place:</strong> Bengaluru</p>
-  <p><strong>Date:</strong> 21/11/2025</p>
-  <p><strong>Signature:</strong> Akshatha S</p>
-</div>
-<div id="akshathaBiodata" class="info-section" style="display:none;">
-      <h2>Bio-data – Akshatha S</h2>
-      <table>
-        <tr><th>Name</th><td>Akshatha S</td></tr>
-        <tr><th>DOB</th><td>03/01/2004</td></tr>
-        <tr><th>Gender</th><td>Female</td></tr>
-        <tr><th>Father's Name</th><td>ShivaKumar N</td></tr>
-        <tr><th>Phone</th><td>+91-7676961404</td></tr>
-        <tr><th>Email</th><td>akshatha@gmail.com</td></tr>
-        <tr><th>Address</th><td> Bengaluru</td></tr>
-        <tr><th>Languages Known</th><td>English, Kannada, Hindi</td></tr>
-        <tr><th>Hobbies</th><td>Reading, Drawing, Sports</td></tr>
-      </table>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 | My Personal Website</p>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
