@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Resume</h1>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="biodata.html">Bio-data</a>
+    </nav>
+  </header>
+
+  <!-- Sub-navigation for selecting resume -->
+  <nav class="sub-nav">
+    <button onclick="showResume('me')">My Resume</button>
+    <button onclick="showResume('friend')">Friend's Resume</button>
+  </nav>
+
+  <section class="content">
+    <!-- My Resume -->
+    <div id="me" class="resume-section" style="display:none;">
+      <h3>Career Objective</h3>
+      <p>To work in a challenging environment and grow professionally.</p>
+
+      <h3>Education</h3>
+      <ul>
+        <li>Bachelor of Computer Science – 2025</li>
+        <li>PUC – 2022</li>
+        <li>SSLC – 2020</li>
+      </ul>
+
+      <h3>Skills</h3>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>C, Java, Python</li>
+      </ul>
+
+      <h3>Projects</h3>
+      <p>Healthcare Portal – MERN Stack application for rural support.</p>
+    </div>
+
+    <!-- Friend's Resume -->
+    <div id="friend" class="resume-section" style="display:none;">
+      <h3>Career Objective</h3>
+      <p>To gain experience in software development and grow professionally.</p>
+
+      <h3>Education</h3>
+      <ul>
+        <li>Bachelor of Computer Science – 2025</li>
+        <li>PUC – 2022</li>
+        <li>SSLC – 2020</li>
+      </ul>
+
+      <h3>Skills</h3>
+      <ul>
+        <li>HTML, CSS, React.js</li>
+        <li>Python, Java</li>
+        <li>Problem-solving, Teamwork</li>
+      </ul>
+
+      <h3>Projects</h3>
+      <p>Library Management System – Web app for managing books and users.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 | My Personal Website</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bio-Data</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Bio-Data</h1>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="biodata.html">Bio-data</a>
+    </nav>
+  </header>
+
+  <!-- Sub-navigation for selecting bio-data -->
+  <nav class="sub-nav">
+    <button onclick="showBiodata('me')">My Bio-data</button>
+    <button onclick="showBiodata('friend')">Friend's Bio-data</button>
+  </nav>
+
+  <section class="content">
+    <!-- My Bio-data -->
+    <div id="meB" class="biodata-section" style="display:none;">
+      <table>
+        <tr><th>Name</th><td>Reethika DN</td></tr>
+        <tr><th>DOB</th><td>30/08/2025</td></tr>
+        <tr><th>Gender</th><td>Female</td></tr>
+        <tr><th>Father's Name</th><td>Nagaraju</td></tr>
+        <tr><th>Mather's Name</th><td>VaraLakshmi</td></tr>
+        <tr><th>Phone</th><td>6363200655</td></tr>
+        <tr><th>Email</th><td>reethu30082005@gmail.com</td></tr>
+        <tr><th>Address</th><td>Doddashettikere,Mayasandra</td></tr>
+        <tr><th>Languages Known</th><td>English, Kannada, Hindi</td></tr>
+        <tr><th>Hobbies</th><td>Reading, Drawing, Sports</td></tr>
+      </table>
+    </div>
+
+    <!-- Friend's Bio-data -->
+    <div id="friendB" class="biodata-section" style="display:none;">
+      <table>
+        <tr><th>Name</th><td>Monika R</td></tr>
+        <tr><th>DOB</th><td>12/07/2005</td></tr>
+        <tr><th>Gender</th><td>Male</td></tr>
+        <tr><th>Father's Name</th><td>Rangaswamaiah</td></tr>
+        <tr><th>Phone</th><td>8861250022</td></tr>
+        <tr><th>Email</th><td>monikarmoni@gmail.com</td></tr>
+        <tr><th>Address</th><td>Nelamangala,Bengaluru</td></tr>
+        <tr><th>Languages Known</th><td>English, Kannada, Hindi</td>
+        <tr><th>Hobbies</th><td>Reading, Drawing, Sports</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 | My Personal Website</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
